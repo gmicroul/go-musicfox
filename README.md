@@ -254,3 +254,23 @@ $ musicfox
 [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200"/>](https://www.jetbrains.com/opensource/)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=go-musicfox/go-musicfox&type=Date)](https://star-history.com/#go-musicfox/go-musicfox&Date)
+
+
+补充mobian的依赖：
+
+Installing Linux dependencies
+
+This page lists the required dependencies to build a Bevy project on your Linux machine.
+
+If you don't see your distro present in the list, feel free to add the instructions in this document.
+Ubuntu
+
+sudo apt-get install g++ pkg-config libx11-dev libasound2-dev libudev-dev libxkbcommon-x11-0
+
+if using Wayland, you will also need to install
+
+sudo apt-get install libwayland-dev libxkbcommon-dev
+
+Depending on your graphics card, you may have to install one of the following: vulkan-radeon, vulkan-intel, or mesa-vulkan-drivers
+
+Compiling with clang is also possible - replace the g++ package with clang.
