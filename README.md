@@ -289,4 +289,19 @@ Package 'flac', required by 'virtual:world', not found
 
 pkg-config: exit status 1
 
-sudo apt-get -y install libflac-dev flac
+go build github.com/hajimehoshi/oto:
+
+# pkg-config --cflags  -- alsa
+
+Package alsa was not found in the pkg-config search path.
+
+Perhaps you should add the directory containing `alsa.pc'
+
+to the PKG_CONFIG_PATH environment variable
+
+Package 'alsa', required by 'virtual:world', not found
+
+pkg-config: exit status 1
+
+
+sudo apt-get -y install libflac-dev flac libasound2-dev 
