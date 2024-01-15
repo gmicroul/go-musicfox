@@ -274,3 +274,19 @@ sudo apt-get install libwayland-dev libxkbcommon-dev
 Depending on your graphics card, you may have to install one of the following: vulkan-radeon, vulkan-intel, or mesa-vulkan-drivers
 
 Compiling with clang is also possible - replace the g++ package with clang.
+
+go build github.com/cocoonlife/goflac:
+
+# pkg-config --cflags  -- flac
+
+Package flac was not found in the pkg-config search path.
+
+Perhaps you should add the directory containing `flac.pc'
+
+to the PKG_CONFIG_PATH environment variable
+
+Package 'flac', required by 'virtual:world', not found
+
+pkg-config: exit status 1
+
+sudo apt-get -y install libflac-dev flac
