@@ -305,3 +305,17 @@ pkg-config: exit status 1
 
 
 sudo apt-get -y install libflac-dev flac libasound2-dev 
+
+
+
+
+Backup your ~/.asoundrc - if you have one - and add the following, to a new ~/.asoundrc:
+
+pcm.!default { 
+ type plug 
+ slave { 
+ pcm "hw:0,0" 
+ } 
+} 
+
+
