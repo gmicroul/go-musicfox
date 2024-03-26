@@ -318,4 +318,22 @@ pcm.!default {
  } 
 } 
 
+在 Alpine Linux arm64 上使用 go-musicfox 且经常出现 panic 的情况，可能是因为缺少了某些依赖库。要解决这个问题，可以尝试以下步骤：
 
+    确保您的 Alpine Linux arm64 系统已经安装了 libasound2-dev 或 libasound2 库，这是 Beep 所需要的 ALSA 库。您可以使用以下命令安装：
+
+apk add alsa-lib alsa-utils
+
+    确保您的系统已经安装了 libasound-dev 库，这是 Beep 所需要的 ALSA 开发包。您可以使用以下命令安装：
+
+apk add alsa-lib-dev
+
+    确保您的系统已经安装了 libasound2-plugins 库，这是 Beep 所需要的 ALSA 插件。您可以使用以下命令安装：
+
+apk add alsa-plugins
+
+    如果您使用的是 Go 编程语言，还需要确保您的 Go 项目中已经正确导入了 Beep 库。您可以使用以下命令安装 Beep：
+
+go get github.com/faiface/beep
+
+通过以上步骤，您应该能够在 Alpine Linux arm64 上成功运行 go-musicfox，并避免出现 panic 的情况。如果问题仍然存在，请提供更多详细信息，以便我能够更好地帮助您解决问题。
